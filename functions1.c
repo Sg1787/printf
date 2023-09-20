@@ -102,17 +102,17 @@ int print_non_printable(va_list types, char buffer[],
 int print_rot13string(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
-	char *str;
 	char x;
-	char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char out[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char *str;
 	unsigned int i, j;
 	int count = 0;
-str = va_arg(types, char *);
-	
-	UNUSED(width);
-UNUSED(buffer);
+	char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char out[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	str = va_arg(types, char *);
+	UNUSED(buffer);
 	UNUSED(flags);
+	UNUSED(width);
 	UNUSED(precision);
 	UNUSED(size);
 
@@ -138,6 +138,7 @@ UNUSED(buffer);
 		}
 	}
 	return (count);
+}
 /************************* PRINT REVERSE *************************/
 /**
  * print_reverse - Prints reverse string.
