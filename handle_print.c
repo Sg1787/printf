@@ -47,4 +47,3 @@ for (i = 0; fmt_types[i].fmt != '\0'; i++)
 	}
 	return (printed_chars);
 }
-
